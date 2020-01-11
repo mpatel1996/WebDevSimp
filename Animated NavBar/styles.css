@@ -13,13 +13,18 @@ header{
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
     position: sticky;
     top: 0px;
-    background: white;
+    /* background: white; */
+}
+
+section h2{
+    font-size: 5rem;
+    color: blueviolet;
 }
 
 nav{
     min-height: 10vh;
     margin: auto;
-    width: 90%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -46,70 +51,45 @@ nav a{
 }
 
 .home{
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.Contact{
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-}
-
-.Projects{
-    min-height: 100vh;
-    display: flex;
-
-}
-
-section h2{
-    font-size: 5rem;
-    color: blueviolet;
-}
-
-.home{
     border: 10px white solid;
     background: linear-gradient(to right bottom, rgba(138, 35, 135, 0.5), rgba(233, 64, 87, 0.5));
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.myinfo{
+    padding: 20px; 
+    min-height: 10%; 
+    height: 80%;
 }
 
 .Projects{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
     border-left: 10px white solid;
     border-right: 10px white solid;
     border-bottom: 5px white solid;
     background: linear-gradient(to right bottom, rgba(233, 64, 87, 0.5), rgba(242, 113, 33, 0.5));
 }
 
-.Contact{
-    border-top: 5px white solid;
-    border-left: 10px white solid;
-    border-right: 10px white solid;
-    border-bottom: 10px white solid;
-    background: linear-gradient(to right bottom, rgba(242, 113, 33, 0.5), rgba(138, 35, 135, 0.5));
-}
-
-.bubble{
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
-    position: absolute;
-    z-index: -2;
-    background: linear-gradient(to right top, rgba(58, 28, 113, 0.123), rgba(215, 109, 120, 0.123));
-    transform: scale(2);
-    transition: all 0.5s ease;
-}
-
-.project-list{
-    margin: 100px 50px ;
-    padding: 10px 30px;
+.all-list{
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    height: inherit;
     border:  5px black solid;
+    max-height: 100vh;
+    max-width: inherit;
+    overflow: auto;
 }
 
 .project-list ul{
     list-style: none;
-    /* display: flex;
-    justify-content: space-between; */
+    /* display: flex; */
+    justify-content: space-between;
     text-decoration: none;
 }
 
@@ -120,4 +100,119 @@ section h2{
     text-decoration: underline;
     font-size: 30px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.Contact{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.Contact{
+    border-top: 5px white solid;
+    border-left: 10px white solid;
+    border-right: 10px white solid;
+    border-bottom: 10px white solid;
+    background: linear-gradient(to right bottom, rgba(242, 113, 33, 0.5), rgba(138, 35, 135, 0.5));
+}
+
+.contact-box{
+    display: flex;
+    justify-content: center;
+}
+
+.bubble{
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 0;
+    opacity: 50%;
+    background: linear-gradient(to right top, rgba(58, 28, 113, 0.123), rgba(215, 109, 120, 0.123));
+    transform: scale(1.5);
+    transition: all 0.5s ease;
+}
+
+
+
+/* Showing the Grid on Home */
+
+.show-grid [class*="span"] {
+    background-color: #eee;
+    text-align: center;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    min-height: 40px;
+    line-height: 40px;
+}
+
+.show-grid [class*="span"]:hover {
+    background-color: #ddd;
+}
+
+.show-grid .show-grid {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.show-grid .show-grid [class*="span"] {
+    margin-top: 5px;
+}
+
+.show-grid [class*="span"] [class*="span"] {
+    background-color: #ccc;
+}
+
+.show-grid [class*="span"] [class*="span"] [class*="span"] {
+    background-color: #999;
+}
+
+/* Row fluid */
+.row-fluid {
+    height: inherit;
+    width: 100%;
+    *zoom: 1;
+}
+
+.row-fluid:before,
+.row-fluid:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+
+.row-fluid:after {
+    clear: both;
+}
+
+.row-fluid [class*="span"] {
+    display: block;
+    float: left;
+    width: 100%;
+    min-height: 30px;
+    margin-left: 2.127659574468085%;
+    *margin-left: 2.074468085106383%;
+    -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.row-fluid [class*="span"]:first-child {
+    margin-left: 0;
+}
+
+.row-fluid .controls-row [class*="span"] + [class*="span"] {
+    margin-left: 2.127659574468085%;
+}
+
+.row-fluid .span6 {
+    height: inherit;
+    width: 48.93617021276595%;
+    *width: 48.88297872340425%;
+}
+
+.row-fluid .span4 {
+    height: inherit;
+    width: 31.914893617021278%;
+    *width: 31.861702127659576%;
 }
