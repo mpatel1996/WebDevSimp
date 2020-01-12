@@ -59,10 +59,14 @@ nav a{
     /* align-items: center; */
 }
 
+.aboutme-container{
+    width: 80vw;
+    height: 80vh;
+}
 .myinfo{
-    padding: 20px; 
+    padding:3%;
     min-height: 10%; 
-    height: 80%;
+    height: 100vh;
 }
 
 .Projects{
@@ -215,4 +219,13 @@ nav a{
     height: inherit;
     width: 31.914893617021278%;
     *width: 31.861702127659576%;
+}
+
+.social{
+    transition-timing-function: ease-in-out;
+    transition-duration: .25s;
+}
+
+.social:hover{
+    transform: scale(1.1,1.1);
 }
